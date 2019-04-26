@@ -32,14 +32,16 @@ descricao_tipo VARCHAR(200)
 
 CREATE TABLE Produto(
 cod_produto INT PRIMARY KEY AUTO_INCREMENT,
+nome_produto VARCHAR(100),
 descricao_produto VARCHAR(200),
+valor_produto FLOAT,
 cod_tipo INT,
 foreign key(cod_tipo) references Tipo(cod_tipo)
 );
 
 CREATE TABLE Venda(
 qtde_venda INT,
-valor_venda FLOAT,
+total_venda FLOAT,
 cod_pedido INT,
 foreign key(cod_pedido) references Pedido(cod_pedido),
 cod_tipo INT,
