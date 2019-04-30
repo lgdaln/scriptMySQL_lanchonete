@@ -48,4 +48,12 @@ cod_tipo INT,
 foreign key(cod_tipo) references Tipo(cod_tipo)
 );
 
+INSERT INTO  Atendente (nome_atendente) VALUES ('Joaquim');
+INSERT INTO  Atendente (nome_atendente) VALUES ('Joana');
+INSERT INTO  Atendente (nome_atendente) VALUES ('Maria);
+
+INSERT INTO  Pedido (data_pedido, hora_pedido, descricao_pedido, status_pedido, obs_pedido, cod_cliente, cod_atendente) VALUES ('30/04/2019', '10:00', 'baguete', 'em execução', 'sem cebola', '1', '1');
+INSERT INTO  Pedido (data_pedido, hora_pedido, descricao_pedido, status_pedido, obs_pedido, cod_cliente, cod_atendente) VALUES ('30/04/2019', '10:00', 'café', "Pronto", 'sem cebola', '1', '1');
+
+
 
