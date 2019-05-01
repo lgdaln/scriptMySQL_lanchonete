@@ -1,3 +1,8 @@
+/*
+Retirada a chave estrangeira cod_atendente de pedido
+inserido nome_atendente ao pedido
+*/
+
 CREATE DATABASE lanchonete;
 
 USE lanchonete
@@ -21,8 +26,8 @@ status_pedido VARCHAR(200),
 obs_pedido VARCHAR(200),
 cod_cliente INT,
 foreign key(cod_cliente) references Cliente(cod_cliente),
-cod_atendente INT,
-foreign key(cod_atendente) references Atendente(cod_atendente)
+nome_atendente VARCHAR(200)
+/*foreign key(cod_atendente) references Atendente(cod_atendente)*/
 );
 
 CREATE TABLE Tipo(
@@ -55,9 +60,9 @@ INSERT INTO  atendente (nome_atendente) VALUES ('Maria');
 INSERT INTO  cliente (nome_cliente) VALUES ('Pedro');
 
 
-INSERT INTO  Pedido (data_pedido, hora_pedido, descricao_pedido, status_pedido, obs_pedido, cod_cliente, cod_atendente) VALUES ('30/04/2019', '10:00', 'baguete', 'Elaboração', 'sem cebola', '3', '6');
-INSERT INTO  Pedido (data_pedido, hora_pedido, descricao_pedido, status_pedido, obs_pedido, cod_cliente, cod_atendente) VALUES ('30/04/2019', '10:00', 'café', "Finalizado", 'sem cebola', '4', '7');
-INSERT INTO  Pedido (data_pedido, hora_pedido, descricao_pedido, status_pedido, obs_pedido, cod_cliente, cod_atendente) VALUES ('30/04/2019', '10:00', 'água sem gás', "Entregue", 'sem cebola', '5', '8');
+INSERT INTO  Pedido (data_pedido, hora_pedido, descricao_pedido, status_pedido, obs_pedido, cod_cliente) VALUES ('30/04/2019', '10:00', 'baguete', 'Elaboração', 'sem cebola', '1');
+INSERT INTO  Pedido (data_pedido, hora_pedido, descricao_pedido, status_pedido, obs_pedido, cod_cliente) VALUES ('30/04/2019', '10:00', 'café', "Finalizado", 'sem cebola', '1');
+INSERT INTO  Pedido (data_pedido, hora_pedido, descricao_pedido, status_pedido, obs_pedido, cod_cliente) VALUES ('30/04/2019', '10:00', 'água sem gás', "Entregue", 'sem cebola', '1');
 
 
 
