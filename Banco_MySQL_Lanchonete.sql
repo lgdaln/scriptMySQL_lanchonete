@@ -41,12 +41,12 @@ foreign key(cod_tipo) references Tipo(cod_tipo)
 );
 
 CREATE TABLE Venda(
-qtde_venda INT,
-total_venda FLOAT,
-cod_pedido INT,
-foreign key(cod_pedido) references Pedido(cod_pedido),
-cod_tipo INT,
-foreign key(cod_tipo) references Tipo(cod_tipo)
+cod_venda INT PRIMARY KEY AUTO_INCREMENT,
+valor_venda FLOAT,
+fk_cod_produto INT,
+foreign key(fk_cod_produto) references Produto(cod_produto),
+fk_cod_pedido INT,
+foreign key(fk_cod_pedido) references Pedido(cod_pedido)
 );
 
 CREATE TABLE CardapioDoDia(
